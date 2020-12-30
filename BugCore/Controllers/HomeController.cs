@@ -66,6 +66,24 @@ namespace BugCore.Controllers
             return RedirectToAction("ShowBugs");
         }
 
+        public IActionResult EditBug(Bug bug)
+        {
+            return View(bug);
+        }
+
+        /*[HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult EditBug(Bug bug)
+        {
+
+            if (ModelState.IsValid)
+            {
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            }
+          
+        }*/
+
         public IActionResult ShowBugs()
         {
             if (ModelState.IsValid)

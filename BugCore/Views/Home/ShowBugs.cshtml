@@ -8,7 +8,7 @@
 <h1>My Bugs</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="CreateBug">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -44,7 +44,7 @@
                 @Html.DisplayFor(modelItem => item.Status)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="EditBug" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="DeleteBug" asp-route-id="@item.Id">Delete</a> |
 </tr>

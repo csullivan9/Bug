@@ -1,13 +1,13 @@
 ﻿@model BugCore.Models.Bug
 
 @{
-    ViewData["CreateBug"] = "CreateBug";
+    ViewData["EditBug"] = "EditBug";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Create Bug</h1>
+<h1>Edit bug</h1>
 
-<h4>Enter bug information below!</h4>
+<h4>Edit bug information below!</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -19,7 +19,7 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
+                <label asp-for="Description" class="control-label">@Model.Description</label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
@@ -29,7 +29,7 @@
                 <span asp-validation-for="BugSeverity" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
+                <label asp-for="Status" class="control-label">@Model.Status</label>
                 <input asp-for="Status" class="form-control" />
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>

@@ -40,5 +40,7 @@ namespace DataLibrary.BusinessLogic
             string sql = @"delete from Bugs where Id=@Id";
             return SqlDataAccess.DeleteData(sql, Id);
         }
+
+        
     }
 }
